@@ -302,8 +302,8 @@ class Slide(object):
         return
 
     def add_text_box(self, text):
-        self.xpath('/p:sld/p:cSld/p:spTree', namespaces=nsprefixes)[0].append(text_box(
-                                                                                   text))
+        self.slide.xpath('/p:sld/p:cSld/p:spTree', namespaces=nsprefixes)[0].append(
+                                                                          text_box(text))
         return
 
 class Document(object):
