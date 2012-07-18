@@ -139,8 +139,8 @@ def picture(picname, slide_rels, picdescription='No Description', pixelwidth=Non
     # OpenXML measures on-screen objects in English Metric Units
     # 1cm = 36000 EMUs
     emuperpixel = 12667
-    width = str(pixelwidth * emuperpixel * scale)
-    height = str(pixelheight * emuperpixel * scale)
+    width = str(int(pixelwidth * emuperpixel * scale))
+    height = str(int(pixelheight * emuperpixel * scale))
 
     # Set relationship ID to the first available
     picid = len(slide_rels) + 1 
