@@ -116,7 +116,7 @@ def makeelement(tagname,tagtext=None,nsprefix='p',attributes=None,attrnsprefix=N
     
 def picture(picname, slide_rels, picdescription='No Description', pixelwidth=None,
             pixelheight=None, nochangeaspect=True, nochangearrowheads=True,
-            template=template_dir, align='center'):
+            template=template_dir, align='center', scale=1):
     '''Take a relationshiplist, picture file name, and return a paragraph containing the image and an updated relationshiplist'''
     # http://openxmldeveloper.org/articles/462.aspx
     # Create an image. Size may be specified, otherwise it will based on the
@@ -139,8 +139,8 @@ def picture(picname, slide_rels, picdescription='No Description', pixelwidth=Non
     # OpenXML measures on-screen objects in English Metric Units
     # 1cm = 36000 EMUs
     emuperpixel = 12667
-    width = str(pixelwidth * emuperpixel)
-    height = str(pixelheight * emuperpixel)
+    width = str(pixelwidth * emuperpixel * scale)
+    height = str(pixelheight * emuperpixel * scale)
 
     # Set relationship ID to the first available
     picid = len(slide_rels) + 1 
