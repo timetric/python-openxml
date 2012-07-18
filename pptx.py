@@ -348,7 +348,7 @@ class Document(object):
         return doc
 
     def add_slide(self):
-        slide = Slide.create(template_dir=self.template_dir, document=self)
+        slide = Slide.create(template_dir=self.template_dir)
         slide.number = len(self.slides) + 1
         self.slides.append(slide)
         slide_list = self.presentation.xpath('/p:presentation/p:sldIdLst',
