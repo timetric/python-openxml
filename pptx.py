@@ -167,7 +167,7 @@ def picture(picname, slide_rels, picdescription='No Description', pixelwidth=Non
     # 3. The Shape properties
     sppr = makeelement('spPr')
     xfrm = makeelement('xfrm',nsprefix='a')
-    xfrm.append(makeelement('off',nsprefix='a',attributes={'x':'2843808','y':'2180447'}))
+    xfrm.append(makeelement('off',nsprefix='a',attributes={'x':'1405440','y':'1820520'}))
     xfrm.append(makeelement('ext',nsprefix='a',attributes={'cx':width,'cy':height}))
     prstgeom = makeelement('prstGeom',nsprefix='a',attributes={'prst':'rect'})
     prstgeom.append(makeelement('avLst',nsprefix='a'))

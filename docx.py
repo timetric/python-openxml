@@ -449,7 +449,7 @@ def picture(relationshiplist, picname, picdescription='No Description', pixelwid
     # 3. The Shape properties
     sppr = makeelement('spPr',nsprefix='pic',attributes={'bwMode':'auto'})
     xfrm = makeelement('xfrm',nsprefix='a')
-    xfrm.append(makeelement('off',nsprefix='a',attributes={'x':'0','y':'0'}))
+    xfrm.append(makeelement('off',nsprefix='a',attributes={'x':'1405440','y':'1820520'}))
     xfrm.append(makeelement('ext',nsprefix='a',attributes={'cx':width,'cy':height}))
     prstgeom = makeelement('prstGeom',nsprefix='a',attributes={'prst':'rect'})
     prstgeom.append(makeelement('avLst',nsprefix='a'))
