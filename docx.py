@@ -449,7 +449,7 @@ def picture(relationshiplist, picname, picdescription='No Description', pixelwid
     # 3. The Shape properties
     sppr = makeelement('spPr',nsprefix='pic',attributes={'bwMode':'auto'})
     xfrm = makeelement('xfrm',nsprefix='a')
-    xfrm.append(makeelement('off',nsprefix='a',attributes={'x':'1405440','y':'1820520'}))
+    xfrm.append(makeelement('off',nsprefix='a',attributes={'x':'0','y':'0'}))
     xfrm.append(makeelement('ext',nsprefix='a',attributes={'cx':width,'cy':height}))
     prstgeom = makeelement('prstGeom',nsprefix='a',attributes={'prst':'rect'})
     prstgeom.append(makeelement('avLst',nsprefix='a'))
@@ -476,7 +476,7 @@ def picture(relationshiplist, picname, picdescription='No Description', pixelwid
     docpr = makeelement('docPr',nsprefix='wp',
         attributes={'id':picid,'name':'Picture 1','descr':picdescription})
     effectextent = makeelement('effectExtent',nsprefix='wp',
-        attributes={'l':'25400','t':'0','r':'0','b':'0'})
+        attributes={'l':'19050','t':'0','r':'2540','b':'0'})
     extent = makeelement('extent',nsprefix='wp',attributes={'cx':width,'cy':height})
     inline = makeelement('inline',
         attributes={'distT':"0",'distB':"0",'distL':"0",'distR':"0"},nsprefix='wp')
