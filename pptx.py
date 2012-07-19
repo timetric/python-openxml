@@ -312,6 +312,9 @@ class Slide(object):
         return slide
 
     def add_picture(self, picname, *args, **kwargs):
+        extension = os.path.splitext(picname)[1]
+        if extension not in ['.jpg', '.jpeg', '.png']:
+            raise ValueError
         self.relationships, pic = picture(picname, slide_rels=self.relationships,
                                         template=self.template_dir, *args, **kwargs)
         self.slide.xpath('/p:sld/p:cSld/p:spTree', namespaces=nsprefixes)[0].append(pic)

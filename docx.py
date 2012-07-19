@@ -58,6 +58,9 @@ class Document(object):
         return 
 
     def add_picture(self, picname, *args, **kwargs):
+        extension = os.path.splitext(picname)[1]
+        if extension not in ['.jpg', '.jpeg', '.png']:
+            raise ValueError
         self.relationshiplist, pic_para = picture(
             self.relationshiplist, picname, template=self.template_dir, *args, **kwargs)
         self.body.append(pic_para)
