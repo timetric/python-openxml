@@ -1,0 +1,2 @@
+recursive-include openxml/docx_template *
+recursive-include openxml/pptx_template *
